@@ -1,5 +1,5 @@
 import express, { Express, Request, Response } from 'express'
-import { createServer } from 'https'
+import { createServer } from 'http'
 import { Server } from 'socket.io'
 import cors from 'cors'
 import { uniqueRoomPrivateChat } from '../utils/uniqueRoomPrivateChat'
@@ -53,10 +53,10 @@ app.get('/', async (req: Request, res: Response) => {
 })
 
 const server = createServer(
-    {
-        key: fs.readFileSync(__dirname + '/../../server.key'),
-        cert: fs.readFileSync(__dirname + '/../../server.cert')
-    },
+    // {
+    //     key: fs.readFileSync(__dirname + '/../../server.key'),
+    //     cert: fs.readFileSync(__dirname + '/../../server.cert')
+    // },
     app
 )
 
