@@ -12,7 +12,7 @@ passport.use(
             clientID: process.env['GOOGLE_CLIENT_ID'],
             clientSecret: process.env['GOOGLE_CLIENT_SECRET'],
             callbackURL: process.env.SERVER_URL
-                ? 'https://chat-application-back-end.vercel.app/api/auth/oauth2/redirect'
+                ? 'https://chat-app-back-end-production-9b7e.up.railway.app/api/auth/oauth2/redirect'
                 : '/api/auth/oauth2/redirect',
             scope: ['profile', 'email']
         },
