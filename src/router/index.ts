@@ -12,15 +12,15 @@ export interface Payload {
 }
 const router: Router = express.Router()
 
-router.get('/', async (req: Request, res: Response) => {
-    try {
-        const result = await Users.find()
-        res.send(result)
-    } catch (error) {
-        res.send(JSON.stringify(error))
-    }
-    // res.send('Chat App Running...')
-})
+// router.get('/', async (req: Request, res: Response) => {
+//     try {
+//         const result = await Users.find()
+//         res.send(result)
+//     } catch (error) {
+//         res.send(JSON.stringify(error))
+//     }
+//     // res.send('Chat App Running...')
+// })
 
 router.use('/auth', auth)
 router.use('/chat', chat)
