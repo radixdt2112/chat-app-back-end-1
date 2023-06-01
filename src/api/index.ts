@@ -9,6 +9,7 @@ import fs from 'fs'
 import MongoStore from 'connect-mongo'
 
 require('dotenv').config()
+//db
 import('../dbConfig')
 
 import router from '../router'
