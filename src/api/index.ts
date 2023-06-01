@@ -5,14 +5,13 @@ import cors from 'cors'
 import { uniqueRoomPrivateChat } from '../utils/uniqueRoomPrivateChat'
 import { saveMessage } from '../services/chatServices'
 import session from 'express-session'
-import fs from 'fs'
 import MongoStore from 'connect-mongo'
 
 require('dotenv').config()
+//DB connection
 import('../dbConfig')
 
 import router from '../router'
-import path from 'path'
 import passport from 'passport'
 import helmet from 'helmet'
 
